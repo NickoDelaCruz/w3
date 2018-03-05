@@ -11,3 +11,9 @@
 
 <% if @projects.any? %>
 <p>Click On Project for additional details</p>
+
+<ul>
+  <% @projects.each do |project| %>
+  <li><a href="/projects/<%= project.id %>"><%= project.title %></a></li>
+  <% end %>
+</ul>
