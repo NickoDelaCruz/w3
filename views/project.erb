@@ -10,4 +10,13 @@
 </form>
 
 <% if @volunteers.any? %>
-<p>Click on a volunteer to view its details:</p>
+<p>Additional details (Click on a Volunteer) </p>
+
+<ul>
+  <% @volunteers.each do |volunteer| %>
+  <li><a href="/volunteers/<%= volunteer.id %>"><%= volunteer.name %></a></li>
+  <% end %>
+</ul>
+
+<p><a href="/projects/<%= @project.id %>/edit">Edit Project</a></p>
+<p><a href="/">Return to Main Page</a></p>
