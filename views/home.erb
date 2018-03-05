@@ -1,0 +1,13 @@
+<h1>Track your volunteers</h1>
+
+<p>Create a new project:</p>
+
+<form action="/" method="post">
+  <label for="title">Title Your Project: </label>
+  <input id="title" name="title" type="text">
+
+  <button type="submit">Submit</button>
+</form>
+
+<% if @projects.any? %>
+<p>Click On Project for additional details</p>
